@@ -1,0 +1,25 @@
+model CyberCinoche
+
+class Personne
+attributes
+	nom : String
+	dateDeNaissance : String
+end
+
+class Cinema 
+attributes
+	nom : String
+	numDeRue : Integer
+	prix : Integer
+end
+
+class Abonne
+attributes
+	id : Integer
+	prix : Integer
+end
+
+association EstSubordonne between
+	Abonne [0..1] role parent 
+	Abonne [0..4] role subordonne
+end
